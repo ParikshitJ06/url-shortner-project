@@ -12,7 +12,7 @@ const urlschema =new  mongoose.Schema({
         type: String,
         required :true,
     }
-})
+},{timestamps:true})
 
 exports.urlmodel = mongoose.model('url-shortner',urlschema);
 
