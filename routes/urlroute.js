@@ -1,4 +1,9 @@
-const express =require('express')
-const mongoose= require('mongoose')
+const express = require('express');
+const urlcontroller = require('../controller/urlcontroller');
 
-const Router = new express.Router();
+const router = express.Router();
+
+router.post("/", urlcontroller.handlegenerateNewShortUrl);
+router.get('/analytics/:shortid', urlcontroller.handleGetAnalytics); // corrected to have a leading slash
+
+module.exports = router;
