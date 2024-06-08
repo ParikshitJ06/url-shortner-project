@@ -19,6 +19,9 @@
   "homepage": "https://github.com/ParikshitJ06/url-shortner-project#readme",
   "dependencies": {
     "express": "^4.19.2",
-    "mongoose": "^8.4.1"
+    "mongoose": "^8.4.1",
+    "nanoid": "^5.0.7",
+    "nodemon": "^3.1.3",
+    "shortid": "^2.2.16"
   }
 }

@@ -1,4 +1,4 @@
-const { string, required } = require('joi');
+const { string, required, number } = require('joi');
 const mongoose = require('mongoose');
 
 
@@ -11,9 +11,13 @@ const urlschema =new  mongoose.Schema({
     requiredurl:{
         type: String,
         required :true,
-    }
+    },
+    visitHistory :
+    [
+        {timestamps: {type:Number}}
+    ]
 },{timestamps:true})
 
-exports.urlmodel = mongoose.model('url-shortner',urlschema);
+const Url = mongoose.model('url',urlschema);
 
-
+module.exports = Url
